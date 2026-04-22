@@ -1,0 +1,41 @@
+dependencies {
+    api project(':com.ford.fdt.hmi.core'),
+            project(':com.ford.fdt.application.core'),
+            project(':com.ford.fdt.hmi.tools.common'),
+            project(':com.ford.fdt.hmi.host'),
+            project(':com.ford.fdt.services.deviceselection.vcmm'),           
+            lib.otx_common_services_ui,
+            lib.framework_services_ui_bridge,
+            lib.otx_common_command,
+            lib.otx_common_command_invoker,
+            lib.framework_resource,
+            lib.framework_api_complextool,
+            lib.framework_apps_otx,
+            lib.framework_services_vehicle,
+            lib.otx_common_apps_utils,
+            lib.core_common,
+            lib.core_io,
+            lib.core_mdx,
+            lib.slf4j_api,
+            lib.comms_daq_api,
+            lib.osgi_core,
+            lib.core_perf,
+            lib.framework_services_rnd,
+            lib.comms_iso14229_impl
+
+    testImplementation lib.junit,
+            lib.jmock_junit,
+            lib.powermock_reflect,
+            lib.powermock_module_junit,
+            lib.powermock_core,
+            lib.powermock_api_mockito,
+            lib.hamcrest_core,
+            lib.hamcrest_library
+}
+jar {
+    manifest {
+        def exportList = ['com.ford.fdt.hmi.template']
+        attributes('Bundle-Activator': 'com.ford.fdt.hmi.template.Activator',
+                'Export-Package': exportList.join(','))
+    }
+}
