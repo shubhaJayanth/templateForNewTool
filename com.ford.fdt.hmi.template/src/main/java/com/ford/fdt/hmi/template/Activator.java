@@ -34,6 +34,7 @@ public class Activator extends AsyncBundleActivator
         public void servicesAvailable(final Map<Class, Object> services, final BundleContext context) throws Exception
         {
             LOG.info("{}: start", Activator.class.getName());
+            LOG.info("");
         }
     }
 
