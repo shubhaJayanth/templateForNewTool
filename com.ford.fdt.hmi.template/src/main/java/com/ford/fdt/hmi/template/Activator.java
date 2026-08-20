@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * Activator.
  *
- * @author srd5kor
+ * @author srd5kor11
  */
 public class Activator extends AsyncBundleActivator
 {
